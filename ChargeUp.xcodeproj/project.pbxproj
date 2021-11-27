@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1101EDF2752681800738BA2 /* PrometheusFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A1101EDE2752681800738BA2 /* PrometheusFirestore */; };
+		A1101EE02752682300738BA2 /* PrometheusFirestore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A1101EDE2752681800738BA2 /* PrometheusFirestore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEA2752747900738BA2 /* HomeViewModel.swift */; };
+		A1101EED275274A100738BA2 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEC275274A100738BA2 /* HomeState.swift */; };
+		A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEE275275A700738BA2 /* HomeInput.swift */; };
 		A1EE5CA2274165EF005D04B2 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA1274165EF005D04B2 /* Tests_iOS.swift */; };
 		A1EE5CA4274165EF005D04B2 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA3274165EF005D04B2 /* Tests_iOSLaunchTests.swift */; };
 		A1EE5CAE274165EF005D04B2 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */; };
@@ -57,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A1101EE02752682300738BA2 /* PrometheusFirestore in Embed Frameworks */,
 				A1EE5CD12741669D005D04B2 /* Prometheus in Embed Frameworks */,
 				A1EE5CCF2741669C005D04B2 /* Helena in Embed Frameworks */,
 			);
@@ -66,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1101EEA2752747900738BA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A1101EEC275274A100738BA2 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		A1101EEE275275A700738BA2 /* HomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInput.swift; sourceTree = "<group>"; };
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
 		A1EE5C89274165EE005D04B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1101EDF2752681800738BA2 /* PrometheusFirestore in Frameworks */,
 				A1EE5CCE27416696005D04B2 /* Prometheus in Frameworks */,
 				A1EE5CCB27416670005D04B2 /* Helena in Frameworks */,
 			);
@@ -122,6 +132,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1101EE22752722000738BA2 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		A1101EE42752726900738BA2 /* Create Charging Station */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */,
+				A1101EE52752728100738BA2 /* UI Elements */,
+			);
+			path = "Create Charging Station";
+			sourceTree = "<group>";
+		};
+		A1101EE52752728100738BA2 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		A1101EE82752737200738BA2 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CE32746BA26005D04B2 /* ChargingStationCard.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		A1101EE9275273B000738BA2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CD327416703005D04B2 /* HomeView.swift */,
+				A1101EEA2752747900738BA2 /* HomeViewModel.swift */,
+				A1101EEC275274A100738BA2 /* HomeState.swift */,
+				A1101EEE275275A700738BA2 /* HomeInput.swift */,
+				A1101EE82752737200738BA2 /* UI Elements */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A1101EF027527AF500738BA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A1EE5C80274165ED005D04B2 = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +199,8 @@
 				A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */,
 				A1EE5C89274165EE005D04B2 /* ContentView.swift */,
 				A1EE5CD827417077005D04B2 /* Models */,
-				A1EE5CD52741679F005D04B2 /* Location */,
-				A1EE5CD2274166E7005D04B2 /* Home */,
+				A1101EF027527AF500738BA2 /* Services */,
+				A1EE5CD2274166E7005D04B2 /* UI */,
 				A1EE5C8A274165EE005D04B2 /* Persistence.swift */,
 				A1EE5C8B274165EF005D04B2 /* Assets.xcassets */,
 				A1EE5C86274165EE005D04B2 /* ChargeUp.xcdatamodeld */,
@@ -185,20 +245,14 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		A1EE5CD2274166E7005D04B2 /* Home */ = {
+		A1EE5CD2274166E7005D04B2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A1EE5CD327416703005D04B2 /* HomeView.swift */,
+				A1101EE9275273B000738BA2 /* Home */,
 				A1EE5CE02746B9C6005D04B2 /* Charging Station */,
+				A1101EE42752726900738BA2 /* Create Charging Station */,
 			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		A1EE5CD52741679F005D04B2 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Location;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		A1EE5CD827417077005D04B2 /* Models */ = {
@@ -213,9 +267,8 @@
 		A1EE5CE02746B9C6005D04B2 /* Charging Station */ = {
 			isa = PBXGroup;
 			children = (
-				A1EE5CE32746BA26005D04B2 /* ChargingStationCard.swift */,
 				A1EE5CE12746B9E0005D04B2 /* ChargingStationDetailView.swift */,
-				A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */,
+				A1101EE22752722000738BA2 /* UI Elements */,
 			);
 			path = "Charging Station";
 			sourceTree = "<group>";
@@ -240,6 +293,7 @@
 			packageProductDependencies = (
 				A1EE5CCA27416670005D04B2 /* Helena */,
 				A1EE5CCD27416696005D04B2 /* Prometheus */,
+				A1101EDE2752681800738BA2 /* PrometheusFirestore */,
 			);
 			productName = "ChargeUp (iOS)";
 			productReference = A1EE5C90274165EF005D04B2 /* ChargeUp.app */;
@@ -336,6 +390,7 @@
 			packageReferences = (
 				A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */,
 				A1EE5CCC27416696005D04B2 /* XCRemoteSwiftPackageReference "Prometheus" */,
+				A1101EDD2752681800738BA2 /* XCRemoteSwiftPackageReference "PrometheusFirestore" */,
 			);
 			productRefGroup = A1EE5C91274165EF005D04B2 /* Products */;
 			projectDirPath = "";
@@ -388,13 +443,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */,
+				A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */,
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
 				A1EE5CB7274165EF005D04B2 /* Persistence.swift in Sources */,
+				A1101EED275274A100738BA2 /* HomeState.swift in Sources */,
 				A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */,
 				A1EE5CB1274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
 				A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */,
 				A1EE5CB5274165EF005D04B2 /* ContentView.swift in Sources */,
 				A1EE5CE22746B9E0005D04B2 /* ChargingStationDetailView.swift in Sources */,
+				A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */,
 				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
 				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
 			);
@@ -831,6 +889,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A1101EDD2752681800738BA2 /* XCRemoteSwiftPackageReference "PrometheusFirestore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AdrianHaubrich/PrometheusFirestore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AdrianHaubrich/Helena";
@@ -850,6 +916,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A1101EDE2752681800738BA2 /* PrometheusFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1101EDD2752681800738BA2 /* XCRemoteSwiftPackageReference "PrometheusFirestore" */;
+			productName = PrometheusFirestore;
+		};
 		A1EE5CCA27416670005D04B2 /* Helena */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */;

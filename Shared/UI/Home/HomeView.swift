@@ -12,41 +12,30 @@ import MapKit
 
 struct HomeView: View {
     
+    // View Model
+    @ObservedObject var viewModel: AnyViewModel<HomeState, HomeInput>
     @StateObject var locationManager = LocationManager()
+    
+    // MARK: UI
     @State var isBottomSheetOpen = true
-    
-    @State var chargingStations: [ChargingStation] = [
-        ChargingStationMock.generateChargingStation(1),
-        ChargingStationMock.generateChargingStation(2),
-        ChargingStationMock.generateChargingStation(3),
-        ChargingStationMock.generateChargingStation(4),
-        ChargingStationMock.generateChargingStation(5)
-    ]
-    
-    @State var currentCenter: CLLocationCoordinate2D?
     @State var isPresentingDetail = false
     @State var isPresentingCreation = false
-    @State var stationToPresent: ChargingStation?
     
+    // MARK: Body
     var body: some View {
         ZStack(alignment: .top) {
             
-            // MARK: Fix
-            if let stationToPresent = stationToPresent {
-                Text(stationToPresent.id).frame(width: 0, height: 0)
-            }
-            
             // MARK: Map with annotation
-            if let currentCenter = self.currentCenter ?? self.locationManager.lastLocation?.coordinate {
-                // TODO: Center as binding that gets updated on change..., or only get once...
+            if let currentCenter = self.viewModel.state.currentCenter ?? self.locationManager.lastLocation?.coordinate {
                 HelenaMapView(centerCoordinate: currentCenter,
-                              annotations: self.chargingStations.map {
+                              annotations: self.viewModel.state.chargingStations.map {
                     return $0.annotation
                 }, isUserInteractionEnabled: true,
                               showUserLocation: true, showScale: true,
                               showCompass: true,
                               showTraffic: true,
                               showBuildings: true) { annotationView in
+                    
                     // Annotation selected
                     guard let annotation = annotationView.annotation else {
                         return
@@ -56,7 +45,7 @@ struct HomeView: View {
                     }
                     
                     // Present Station
-                    self.stationToPresent = station
+                    self.setStation(station)
                     self.isPresentingDetail.toggle()
                     
                 }
@@ -78,13 +67,13 @@ struct HomeView: View {
                 
                 // Charging Stations
                 ScrollView {
-                    ForEach(self.chargingStations) { station in
+                    ForEach(self.viewModel.state.chargingStations) { station in
                         ChargingStationCard(station: station) { station in
                             // Center Map to Station
                             // self.currentCenter = station.annotation.coordinate
                             
                             // Present Station
-                            self.stationToPresent = station
+                            self.setStation(station)
                             self.isPresentingDetail.toggle()
                         }
                         .padding(5)
@@ -98,7 +87,7 @@ struct HomeView: View {
         
         // MARK: Detail
         .sheet(isPresented: $isPresentingDetail) {
-            if let stationToPresent = stationToPresent {
+            if let stationToPresent = self.viewModel.state.stationToPresent {
                 CharginStationDetailView(station: stationToPresent)
             }
         }
@@ -117,10 +106,12 @@ struct HomeView: View {
     
 }
 
+
+// MARK: - Trigger
 extension HomeView {
     
     func getStationByAnnotation(_ annotation: MKAnnotation) throws -> ChargingStation {
-        for station in self.chargingStations {
+        for station in self.viewModel.state.chargingStations {
             if station.annotation.title == annotation.title {
                 return station
             }
@@ -128,8 +119,12 @@ extension HomeView {
         throw ChargingStationError.stationNotFound
     }
     
+    func setStation(_ station: ChargingStation) {
+        self.viewModel.trigger(.setStationToPresent(station: station))
+    }
+    
     func createStation(_ station: ChargingStation) {
-        self.chargingStations.append(station)
+        self.viewModel.trigger(.createStation(station: station))
     }
     
 }
@@ -176,6 +171,6 @@ struct IconButton: View {
 // MARK: - Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: AnyViewModel(HomeViewModel()))
     }
 }

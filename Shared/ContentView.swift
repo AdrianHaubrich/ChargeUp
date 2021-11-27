@@ -7,12 +7,13 @@
 
 import SwiftUI
 import CoreData
+import Prometheus
 
 
 struct ContentView: View {
     
     var body: some View {
-        HomeView()
+        HomeView(viewModel: AnyViewModel(HomeViewModel()))
     }
     
 }

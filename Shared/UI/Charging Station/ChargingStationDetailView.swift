@@ -18,8 +18,9 @@ struct CharginStationDetailView: View {
                 
                 // MARK: Location
                 HelenaLocationCard(selectedLocation: station.location, isEditing: false, onChange: { _ in })
+                    .padding()
                 
-                // Details
+                // MARK: Details
                 HelenaCard {
                     VStack {
                         HStack {
