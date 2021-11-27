@@ -23,11 +23,13 @@ class HomeViewModel: ViewModel {
     
 }
 
-extension HomeViewModel {
-    
-    
-    
-}
+
+// MARK: - Fetch
+extension HomeViewModel {}
+
+
+// MARK: - Upload
+extension HomeViewModel {}
 
 
 // MARK: - Trigger
