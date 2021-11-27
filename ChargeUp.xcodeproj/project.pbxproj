@@ -21,6 +21,16 @@
 		A1EE5CB8274165EF005D04B2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5C8A274165EE005D04B2 /* Persistence.swift */; };
 		A1EE5CB9274165EF005D04B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EE5C8B274165EF005D04B2 /* Assets.xcassets */; };
 		A1EE5CBA274165EF005D04B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EE5C8B274165EF005D04B2 /* Assets.xcassets */; };
+		A1EE5CCB27416670005D04B2 /* Helena in Frameworks */ = {isa = PBXBuildFile; productRef = A1EE5CCA27416670005D04B2 /* Helena */; };
+		A1EE5CCE27416696005D04B2 /* Prometheus in Frameworks */ = {isa = PBXBuildFile; productRef = A1EE5CCD27416696005D04B2 /* Prometheus */; };
+		A1EE5CCF2741669C005D04B2 /* Helena in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A1EE5CCA27416670005D04B2 /* Helena */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A1EE5CD12741669D005D04B2 /* Prometheus in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A1EE5CCD27416696005D04B2 /* Prometheus */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CD327416703005D04B2 /* HomeView.swift */; };
+		A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CD927417086005D04B2 /* ChargingStation.swift */; };
+		A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CDE2746B3A6005D04B2 /* ChargingStationError.swift */; };
+		A1EE5CE22746B9E0005D04B2 /* ChargingStationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CE12746B9E0005D04B2 /* ChargingStationDetailView.swift */; };
+		A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CE32746BA26005D04B2 /* ChargingStationCard.swift */; };
+		A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A1EE5CD02741669C005D04B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1EE5CD12741669D005D04B2 /* Prometheus in Embed Frameworks */,
+				A1EE5CCF2741669C005D04B2 /* Helena in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
@@ -55,6 +80,12 @@
 		A1EE5CA9274165EF005D04B2 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A1EE5CAF274165EF005D04B2 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		A1EE5CD327416703005D04B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A1EE5CD927417086005D04B2 /* ChargingStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStation.swift; sourceTree = "<group>"; };
+		A1EE5CDE2746B3A6005D04B2 /* ChargingStationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationError.swift; sourceTree = "<group>"; };
+		A1EE5CE12746B9E0005D04B2 /* ChargingStationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationDetailView.swift; sourceTree = "<group>"; };
+		A1EE5CE32746BA26005D04B2 /* ChargingStationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationCard.swift; sourceTree = "<group>"; };
+		A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChargingStationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EE5CCE27416696005D04B2 /* Prometheus in Frameworks */,
+				A1EE5CCB27416670005D04B2 /* Helena in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +138,9 @@
 			children = (
 				A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */,
 				A1EE5C89274165EE005D04B2 /* ContentView.swift */,
+				A1EE5CD827417077005D04B2 /* Models */,
+				A1EE5CD52741679F005D04B2 /* Location */,
+				A1EE5CD2274166E7005D04B2 /* Home */,
 				A1EE5C8A274165EE005D04B2 /* Persistence.swift */,
 				A1EE5C8B274165EF005D04B2 /* Assets.xcassets */,
 				A1EE5C86274165EE005D04B2 /* ChargeUp.xcdatamodeld */,
@@ -149,6 +185,41 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		A1EE5CD2274166E7005D04B2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CD327416703005D04B2 /* HomeView.swift */,
+				A1EE5CE02746B9C6005D04B2 /* Charging Station */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A1EE5CD52741679F005D04B2 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		A1EE5CD827417077005D04B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CD927417086005D04B2 /* ChargingStation.swift */,
+				A1EE5CDE2746B3A6005D04B2 /* ChargingStationError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1EE5CE02746B9C6005D04B2 /* Charging Station */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CE32746BA26005D04B2 /* ChargingStationCard.swift */,
+				A1EE5CE12746B9E0005D04B2 /* ChargingStationDetailView.swift */,
+				A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */,
+			);
+			path = "Charging Station";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,12 +230,17 @@
 				A1EE5C8C274165EF005D04B2 /* Sources */,
 				A1EE5C8D274165EF005D04B2 /* Frameworks */,
 				A1EE5C8E274165EF005D04B2 /* Resources */,
+				A1EE5CD02741669C005D04B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "ChargeUp (iOS)";
+			packageProductDependencies = (
+				A1EE5CCA27416670005D04B2 /* Helena */,
+				A1EE5CCD27416696005D04B2 /* Prometheus */,
+			);
 			productName = "ChargeUp (iOS)";
 			productReference = A1EE5C90274165EF005D04B2 /* ChargeUp.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +333,10 @@
 				Base,
 			);
 			mainGroup = A1EE5C80274165ED005D04B2;
+			packageReferences = (
+				A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */,
+				A1EE5CCC27416696005D04B2 /* XCRemoteSwiftPackageReference "Prometheus" */,
+			);
 			productRefGroup = A1EE5C91274165EF005D04B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,10 +387,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */,
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
 				A1EE5CB7274165EF005D04B2 /* Persistence.swift in Sources */,
+				A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */,
 				A1EE5CB1274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
+				A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */,
 				A1EE5CB5274165EF005D04B2 /* ContentView.swift in Sources */,
+				A1EE5CE22746B9E0005D04B2 /* ChargingStationDetailView.swift in Sources */,
+				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
+				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +566,8 @@
 				DEVELOPMENT_TEAM = JAC95G8ZKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show chargin stations in your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to show chargin stations in your area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,6 +598,8 @@
 				DEVELOPMENT_TEAM = JAC95G8ZKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show chargin stations in your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to show chargin stations in your area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -537,6 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -565,6 +656,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -737,6 +829,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AdrianHaubrich/Helena";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A1EE5CCC27416696005D04B2 /* XCRemoteSwiftPackageReference "Prometheus" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AdrianHaubrich/Prometheus";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1EE5CCA27416670005D04B2 /* Helena */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */;
+			productName = Helena;
+		};
+		A1EE5CCD27416696005D04B2 /* Prometheus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1EE5CCC27416696005D04B2 /* XCRemoteSwiftPackageReference "Prometheus" */;
+			productName = Prometheus;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A1EE5C86274165EE005D04B2 /* ChargeUp.xcdatamodeld */ = {

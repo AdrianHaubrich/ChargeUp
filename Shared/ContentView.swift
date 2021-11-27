@@ -8,7 +8,17 @@
 import SwiftUI
 import CoreData
 
+
 struct ContentView: View {
+    
+    var body: some View {
+        HomeView()
+    }
+    
+}
+
+
+/*struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -81,7 +91,7 @@ private let itemFormatter: DateFormatter = {
     formatter.dateStyle = .short
     formatter.timeStyle = .medium
     return formatter
-}()
+}()*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

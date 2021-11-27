@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Helena",
+        "repositoryURL": "https://github.com/AdrianHaubrich/Helena",
+        "state": {
+          "branch": "main",
+          "revision": "ffc2f69be38472132c82e90cc79b72958ef0e3e3",
+          "version": null
+        }
+      },
+      {
+        "package": "Prometheus",
+        "repositoryURL": "https://github.com/AdrianHaubrich/Prometheus",
+        "state": {
+          "branch": "main",
+          "revision": "1b366be95131c6108ec5c0e9a3a47565b9a05517",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
