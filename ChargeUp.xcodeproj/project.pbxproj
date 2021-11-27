@@ -15,6 +15,11 @@
 		A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */; };
 		A1101EF427527F7000738BA2 /* ChargingStationDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */; };
 		A1101EF627527F8600738BA2 /* ChargingStationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF527527F8600738BA2 /* ChargingStationInput.swift */; };
+		A1101EF82752882C00738BA2 /* FirestoreChargingStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF72752882C00738BA2 /* FirestoreChargingStationsService.swift */; };
+		A1101EFD275288AB00738BA2 /* ChargingStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EFC275288AB00738BA2 /* ChargingStationsService.swift */; };
+		A1101EFF275288D400738BA2 /* ChargingStationsServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EFE275288D300738BA2 /* ChargingStationsServiceType.swift */; };
+		A1101F0127528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101F0027528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift */; };
+		A1101F0327528CE600738BA2 /* FirestoreChargingStationsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101F0227528CE600738BA2 /* FirestoreChargingStationsServiceError.swift */; };
 		A1EE5CA2274165EF005D04B2 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA1274165EF005D04B2 /* Tests_iOS.swift */; };
 		A1EE5CA4274165EF005D04B2 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA3274165EF005D04B2 /* Tests_iOSLaunchTests.swift */; };
 		A1EE5CAE274165EF005D04B2 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */; };
@@ -81,6 +86,11 @@
 		A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationDetailViewModel.swift; sourceTree = "<group>"; };
 		A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationDetailState.swift; sourceTree = "<group>"; };
 		A1101EF527527F8600738BA2 /* ChargingStationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationInput.swift; sourceTree = "<group>"; };
+		A1101EF72752882C00738BA2 /* FirestoreChargingStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChargingStationsService.swift; sourceTree = "<group>"; };
+		A1101EFC275288AB00738BA2 /* ChargingStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsService.swift; sourceTree = "<group>"; };
+		A1101EFE275288D300738BA2 /* ChargingStationsServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsServiceType.swift; sourceTree = "<group>"; };
+		A1101F0027528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChargingStationsReferenceFactory.swift; sourceTree = "<group>"; };
+		A1101F0227528CE600738BA2 /* FirestoreChargingStationsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChargingStationsServiceError.swift; sourceTree = "<group>"; };
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
 		A1EE5C89274165EE005D04B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,8 +179,29 @@
 		A1101EF027527AF500738BA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A1101EF92752883900738BA2 /* Charging Stations */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A1101EF92752883900738BA2 /* Charging Stations */ = {
+			isa = PBXGroup;
+			children = (
+				A1101EFC275288AB00738BA2 /* ChargingStationsService.swift */,
+				A1101EFE275288D300738BA2 /* ChargingStationsServiceType.swift */,
+				A1101EFA2752886A00738BA2 /* Firestore */,
+			);
+			path = "Charging Stations";
+			sourceTree = "<group>";
+		};
+		A1101EFA2752886A00738BA2 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				A1101EF72752882C00738BA2 /* FirestoreChargingStationsService.swift */,
+				A1101F0027528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift */,
+				A1101F0227528CE600738BA2 /* FirestoreChargingStationsServiceError.swift */,
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 		A1EE5C80274165ED005D04B2 = {
@@ -435,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1101F0127528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift in Sources */,
 				A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */,
 				A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */,
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
@@ -444,11 +476,15 @@
 				A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */,
 				A1EE5CB1274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
 				A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */,
+				A1101EF82752882C00738BA2 /* FirestoreChargingStationsService.swift in Sources */,
 				A1EE5CB5274165EF005D04B2 /* ContentView.swift in Sources */,
 				A1101EF627527F8600738BA2 /* ChargingStationInput.swift in Sources */,
 				A1EE5CE22746B9E0005D04B2 /* ChargingStationDetailView.swift in Sources */,
+				A1101EFD275288AB00738BA2 /* ChargingStationsService.swift in Sources */,
 				A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */,
+				A1101F0327528CE600738BA2 /* FirestoreChargingStationsServiceError.swift in Sources */,
 				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
+				A1101EFF275288D400738BA2 /* ChargingStationsServiceType.swift in Sources */,
 				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
 				A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */,
 			);
