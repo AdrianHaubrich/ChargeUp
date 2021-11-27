@@ -72,7 +72,7 @@ extension FirestoreChargingStationsService {
             return stations
             
         } catch {
-            print("Error in FirestoreChatService: " + error.localizedDescription)
+            print("Error in \(#file) in \(#function): " + error.localizedDescription)
             return nil
         }
     }
