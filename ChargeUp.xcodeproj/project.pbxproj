@@ -138,27 +138,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1101EE22752722000738BA2 /* UI Elements */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UI Elements";
-			sourceTree = "<group>";
-		};
 		A1101EE42752726900738BA2 /* Create Charging Station */ = {
 			isa = PBXGroup;
 			children = (
 				A1EE5CE52746BAF2005D04B2 /* CreateChargingStationView.swift */,
-				A1101EE52752728100738BA2 /* UI Elements */,
 			);
 			path = "Create Charging Station";
-			sourceTree = "<group>";
-		};
-		A1101EE52752728100738BA2 /* UI Elements */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 		A1101EE82752737200738BA2 /* UI Elements */ = {
@@ -277,7 +262,6 @@
 				A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */,
 				A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */,
 				A1101EF527527F8600738BA2 /* ChargingStationInput.swift */,
-				A1101EE22752722000738BA2 /* UI Elements */,
 			);
 			path = "Charging Station Detail";
 			sourceTree = "<group>";
