@@ -12,6 +12,9 @@
 		A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEA2752747900738BA2 /* HomeViewModel.swift */; };
 		A1101EED275274A100738BA2 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEC275274A100738BA2 /* HomeState.swift */; };
 		A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EEE275275A700738BA2 /* HomeInput.swift */; };
+		A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */; };
+		A1101EF427527F7000738BA2 /* ChargingStationDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */; };
+		A1101EF627527F8600738BA2 /* ChargingStationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EF527527F8600738BA2 /* ChargingStationInput.swift */; };
 		A1EE5CA2274165EF005D04B2 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA1274165EF005D04B2 /* Tests_iOS.swift */; };
 		A1EE5CA4274165EF005D04B2 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA3274165EF005D04B2 /* Tests_iOSLaunchTests.swift */; };
 		A1EE5CAE274165EF005D04B2 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */; };
@@ -75,6 +78,9 @@
 		A1101EEA2752747900738BA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A1101EEC275274A100738BA2 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		A1101EEE275275A700738BA2 /* HomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInput.swift; sourceTree = "<group>"; };
+		A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationDetailViewModel.swift; sourceTree = "<group>"; };
+		A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationDetailState.swift; sourceTree = "<group>"; };
+		A1101EF527527F8600738BA2 /* ChargingStationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationInput.swift; sourceTree = "<group>"; };
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
 		A1EE5C89274165EE005D04B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -249,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				A1101EE9275273B000738BA2 /* Home */,
-				A1EE5CE02746B9C6005D04B2 /* Charging Station */,
+				A1EE5CE02746B9C6005D04B2 /* Charging Station Detail */,
 				A1101EE42752726900738BA2 /* Create Charging Station */,
 			);
 			path = UI;
@@ -264,13 +270,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A1EE5CE02746B9C6005D04B2 /* Charging Station */ = {
+		A1EE5CE02746B9C6005D04B2 /* Charging Station Detail */ = {
 			isa = PBXGroup;
 			children = (
 				A1EE5CE12746B9E0005D04B2 /* ChargingStationDetailView.swift */,
+				A1101EF127527F5E00738BA2 /* ChargingStationDetailViewModel.swift */,
+				A1101EF327527F7000738BA2 /* ChargingStationDetailState.swift */,
+				A1101EF527527F8600738BA2 /* ChargingStationInput.swift */,
 				A1101EE22752722000738BA2 /* UI Elements */,
 			);
-			path = "Charging Station";
+			path = "Charging Station Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,14 +456,17 @@
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
 				A1EE5CB7274165EF005D04B2 /* Persistence.swift in Sources */,
 				A1101EED275274A100738BA2 /* HomeState.swift in Sources */,
+				A1101EF427527F7000738BA2 /* ChargingStationDetailState.swift in Sources */,
 				A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */,
 				A1EE5CB1274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
 				A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */,
 				A1EE5CB5274165EF005D04B2 /* ContentView.swift in Sources */,
+				A1101EF627527F8600738BA2 /* ChargingStationInput.swift in Sources */,
 				A1EE5CE22746B9E0005D04B2 /* ChargingStationDetailView.swift in Sources */,
 				A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */,
 				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
 				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
+				A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

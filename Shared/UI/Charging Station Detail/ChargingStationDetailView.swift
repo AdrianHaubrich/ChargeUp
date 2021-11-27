@@ -7,17 +7,20 @@
 
 import SwiftUI
 import Helena
+import Prometheus
 
 struct CharginStationDetailView: View {
     
-    let station: ChargingStation
+    // View Model
+    @ObservedObject var viewModel: AnyViewModel<ChargingStationDetailState, ChargingStationDetailInput>
     
     var body: some View {
+        
         NavigationView {
             ScrollView {
                 
                 // MARK: Location
-                HelenaLocationCard(selectedLocation: station.location, isEditing: false, onChange: { _ in })
+                HelenaLocationCard(selectedLocation: viewModel.station.location, isEditing: false, onChange: { _ in })
                     .padding()
                 
                 // MARK: Details
@@ -26,12 +29,12 @@ struct CharginStationDetailView: View {
                         HStack {
                             Spacer()
                         }
-                        Text(station.annotation.title ?? "Unknown Station")
+                        Text(viewModel.station.annotation.title ?? "Unknown Station")
                     }.padding()
                 }
                 .padding()
             }
-            .navigationTitle(station.annotation.title ?? "Unknown Station")
+            .navigationTitle(viewModel.station.annotation.title ?? "Unknown Station")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

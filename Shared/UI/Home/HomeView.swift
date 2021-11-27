@@ -88,7 +88,7 @@ struct HomeView: View {
         // MARK: Detail
         .sheet(isPresented: $isPresentingDetail) {
             if let stationToPresent = self.viewModel.state.stationToPresent {
-                CharginStationDetailView(station: stationToPresent)
+                CharginStationDetailView(viewModel: AnyViewModel(ChargingStationDetailViewModel(station: stationToPresent)))
             }
         }
         
