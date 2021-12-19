@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>298836803173-cg0is1cru7poauehjs1e0tml3ha6hnc0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.298836803173-cg0is1cru7poauehjs1e0tml3ha6hnc0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAtLBFHUtruuvGLs7tX6Xy7Hh4kv-oSBCA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>298836803173</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Adrian-Haubrich.ChargeUp</string>
+	<key>PROJECT_ID</key>
+	<string>chargeup-dd327</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chargeup-dd327.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:298836803173:ios:888edb8e468ba424cc508c</string>
+</dict>
+</plist>
