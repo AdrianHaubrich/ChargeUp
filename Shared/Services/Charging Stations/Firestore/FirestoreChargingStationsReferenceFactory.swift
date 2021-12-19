@@ -18,8 +18,6 @@ struct FirestoreChargingStationsReferenceFactory {
     
 }
 
-
-// MARK: - Fetch
 extension FirestoreChargingStationsReferenceFactory {
     
     static func generateStationReference(by stationID: String) -> DocumentReference {

@@ -33,6 +33,16 @@
 		A155F195276F679000E909E2 /* RouteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F194276F679000E909E2 /* RouteInput.swift */; };
 		A155F199276F732C00E909E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A155F198276F732B00E909E2 /* GoogleService-Info.plist */; };
 		A155F19A276F732C00E909E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A155F198276F732B00E909E2 /* GoogleService-Info.plist */; };
+		A155F19D276F7B3000E909E2 /* RoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F19C276F7B3000E909E2 /* RoutesService.swift */; };
+		A155F19E276F7B3000E909E2 /* RoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F19C276F7B3000E909E2 /* RoutesService.swift */; };
+		A155F1A1276F7B5E00E909E2 /* RoutesServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A0276F7B5E00E909E2 /* RoutesServiceType.swift */; };
+		A155F1A2276F7B5E00E909E2 /* RoutesServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A0276F7B5E00E909E2 /* RoutesServiceType.swift */; };
+		A155F1A4276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A3276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift */; };
+		A155F1A5276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A3276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift */; };
+		A155F1A7276F7DD500E909E2 /* FirestoreRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A6276F7DD500E909E2 /* FirestoreRoutesService.swift */; };
+		A155F1A8276F7DD500E909E2 /* FirestoreRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A6276F7DD500E909E2 /* FirestoreRoutesService.swift */; };
+		A155F1AA276F7EDF00E909E2 /* FirestoreRouteServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A9276F7EDF00E909E2 /* FirestoreRouteServiceError.swift */; };
+		A155F1AB276F7EDF00E909E2 /* FirestoreRouteServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F1A9276F7EDF00E909E2 /* FirestoreRouteServiceError.swift */; };
 		A1EE5CA2274165EF005D04B2 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA1274165EF005D04B2 /* Tests_iOS.swift */; };
 		A1EE5CA4274165EF005D04B2 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA3274165EF005D04B2 /* Tests_iOSLaunchTests.swift */; };
 		A1EE5CAE274165EF005D04B2 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */; };
@@ -113,6 +123,11 @@
 		A155F192276F678800E909E2 /* RouteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteState.swift; sourceTree = "<group>"; };
 		A155F194276F679000E909E2 /* RouteInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInput.swift; sourceTree = "<group>"; };
 		A155F198276F732B00E909E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A155F19C276F7B3000E909E2 /* RoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesService.swift; sourceTree = "<group>"; };
+		A155F1A0276F7B5E00E909E2 /* RoutesServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesServiceType.swift; sourceTree = "<group>"; };
+		A155F1A3276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRouteReferenceFactory.swift; sourceTree = "<group>"; };
+		A155F1A6276F7DD500E909E2 /* FirestoreRoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRoutesService.swift; sourceTree = "<group>"; };
+		A155F1A9276F7EDF00E909E2 /* FirestoreRouteServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRouteServiceError.swift; sourceTree = "<group>"; };
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
 		A1EE5C89274165EE005D04B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +219,7 @@
 		A1101EF027527AF500738BA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A155F19B276F7B1900E909E2 /* Routes */,
 				A1101EF92752883900738BA2 /* Charging Stations */,
 			);
 			path = Services;
@@ -265,6 +281,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A155F19B276F7B1900E909E2 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				A155F19C276F7B3000E909E2 /* RoutesService.swift */,
+				A155F1A0276F7B5E00E909E2 /* RoutesServiceType.swift */,
+				A155F19F276F7B3A00E909E2 /* Firestore */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		A155F19F276F7B3A00E909E2 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				A155F1A3276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift */,
+				A155F1A6276F7DD500E909E2 /* FirestoreRoutesService.swift */,
+				A155F1A9276F7EDF00E909E2 /* FirestoreRouteServiceError.swift */,
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 		A1EE5C80274165ED005D04B2 = {
@@ -545,6 +581,8 @@
 				A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */,
 				A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */,
 				A155F18B276F5BF900E909E2 /* RouteError.swift in Sources */,
+				A155F19D276F7B3000E909E2 /* RoutesService.swift in Sources */,
+				A155F1A4276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift in Sources */,
 				A155F18F276F616300E909E2 /* RouteElementState.swift in Sources */,
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
 				A1EE5CB7274165EF005D04B2 /* Persistence.swift in Sources */,
@@ -561,11 +599,14 @@
 				A1101EFD275288AB00738BA2 /* ChargingStationsService.swift in Sources */,
 				A1101EEF275275A700738BA2 /* HomeInput.swift in Sources */,
 				A1101F0327528CE600738BA2 /* FirestoreChargingStationsServiceError.swift in Sources */,
+				A155F1A1276F7B5E00E909E2 /* RoutesServiceType.swift in Sources */,
 				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
 				A1101EFF275288D400738BA2 /* ChargingStationsServiceType.swift in Sources */,
 				A155F191276F677900E909E2 /* RouteViewModel.swift in Sources */,
 				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
+				A155F1AA276F7EDF00E909E2 /* FirestoreRouteServiceError.swift in Sources */,
 				A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */,
+				A155F1A7276F7DD500E909E2 /* FirestoreRoutesService.swift in Sources */,
 				A155F193276F678800E909E2 /* RouteState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,9 +616,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EE5CB4274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
+				A155F1A5276F7CBE00E909E2 /* FirestoreRouteReferenceFactory.swift in Sources */,
 				A1EE5CB8274165EF005D04B2 /* Persistence.swift in Sources */,
+				A155F19E276F7B3000E909E2 /* RoutesService.swift in Sources */,
 				A1EE5CB2274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
+				A155F1A8276F7DD500E909E2 /* FirestoreRoutesService.swift in Sources */,
 				A1EE5CB6274165EF005D04B2 /* ContentView.swift in Sources */,
+				A155F1AB276F7EDF00E909E2 /* FirestoreRouteServiceError.swift in Sources */,
+				A155F1A2276F7B5E00E909E2 /* RoutesServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
