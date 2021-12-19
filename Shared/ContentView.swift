@@ -29,14 +29,14 @@ struct ContentView: View {
         } else {
             VStack {
                 Text("Login").helenaFont(type: .title)
-                HelenaTextField("Password", text: $email, isSecure: false, isLarge: true)
+                HelenaTextField("Email", text: $email, isSecure: false, isLarge: true)
                 HelenaTextField("Password", text: $password, isSecure: true, isLarge: true)
                 HelenaButton(text: "Login") {
                     Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error  in
                         self.uid = authResult?.user.uid
                     }
                 }
-            }
+            }.padding()
             .onAppear {
                 if let uid = Auth.auth().currentUser?.uid {
                     self.uid = uid

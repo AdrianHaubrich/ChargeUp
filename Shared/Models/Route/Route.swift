@@ -47,7 +47,7 @@ struct Route: Identifiable {
         ]
         
         // Init
-        self.init(title: "Weihnachten 2021", stations: stations, ownerID: ownerID)
+        self.init(title: "Demo Title", stations: stations, ownerID: ownerID)
         
     }
     
