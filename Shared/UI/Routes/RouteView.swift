@@ -88,6 +88,11 @@ struct RouteElementView: View {
     var body: some View {
         HStack {
             RouteCircle(radius: circleRadius, strokeWidth: strokeWidth, state: state)
+                .onTapGesture {
+                    // Select station
+                    self.onSelection(station)
+                }
+            
             ChargingStationCard(station: station, isCollapsable: true, initialIsCollabsed: isCollabsed()) {_ in
                 // Select station
                 self.onSelection(station)
