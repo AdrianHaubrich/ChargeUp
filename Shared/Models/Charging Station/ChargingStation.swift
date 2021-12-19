@@ -13,6 +13,7 @@ import Prometheus
 struct ChargingStation: Identifiable {
 
     let id: String
+    let ownerID: String
     
     // Placemark
     var location: Location?
@@ -20,15 +21,19 @@ struct ChargingStation: Identifiable {
     // var link
     
     // Charging Data
+    // price
+    // kw
+    // charging-ports
     
     
     // TODO: Create from CLPlacemark
-    init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D, location: Location? = nil) {
+    init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D, ownerID: String, location: Location? = nil) {
         
         // TODO: Title needs to be unique... -> identify by combination of title and coordinate -> secure: check with backend if existing and add number: e.g. Title #1
         
         // Identifiable
         self.id = UUID().uuidString
+        self.ownerID = ownerID
         
         // Annotation
         self.annotation = MKPointAnnotation()
@@ -46,11 +51,22 @@ struct ChargingStation: Identifiable {
 }
 
 
+// MARK: - Equatable
+extension ChargingStation: Equatable {
+    
+    static func == (lhs: ChargingStation, rhs: ChargingStation) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+}
+
+
 // MARK: - Codable
 extension ChargingStation: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
+        case ownerID
         case title
         case subtitle
         case longitude
@@ -66,31 +82,35 @@ extension ChargingStation: Codable {
         
         // MARK: Force decoding
         self.id = try values.decode(String.self, forKey: .id)
+        self.ownerID = try values.decode(String.self, forKey: .ownerID)
         
         // MARK: Safe decoding (not optional!)
         self.annotation = MKPointAnnotation()
         
         // Title
         guard let title = try? values.decode(String.self, forKey: .title) else {
-            throw ChargingStationError.unableToDecodeTitle
+            let error = ChargingStationError.unableToDecodeTitle
+            print("Error in \(#file) in \(#function): " + error.localizedDescription)
+            throw error
         }
         self.annotation.title = title
         
         // Longitude
-        guard let longitude = try? values.decode(String.self, forKey: .longitude) else {
-            throw ChargingStationError.unableToDecodeLongitude
+        guard let longitude = try? values.decode(Double.self, forKey: .longitude) else {
+            let error = ChargingStationError.unableToDecodeLongitude
+            print("Error in \(#file) in \(#function): " + error.localizedDescription)
+            throw error
         }
         
         // Latitude
-        guard let latitude = try? values.decode(String.self, forKey: .latitude) else {
-            throw ChargingStationError.unableToDecodeLatitude
+        guard let latitude = try? values.decode(Double.self, forKey: .latitude) else {
+            let error = ChargingStationError.unableToDecodeLatitude
+            print("Error in \(#file) in \(#function): " + error.localizedDescription)
+            throw error
         }
         
         // Coordinate (from longitude & latitude)
-        if let longitude = Double(longitude),
-           let latitude = Double(latitude) {
-            self.annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
+        self.annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
         // MARK: Optional decoding
         // Subtitle
@@ -118,6 +138,7 @@ extension ChargingStation: Codable {
         
         // MARK: Force encoding
         try container.encode(self.id, forKey: .id)
+        try container.encode(self.ownerID, forKey: .ownerID)
         try container.encode(self.annotation.coordinate.longitude, forKey: .longitude)
         try container.encode(self.annotation.coordinate.latitude, forKey: .latitude)
         
@@ -149,17 +170,17 @@ struct ChargingStationMock {
     static func generateChargingStation(_ station: Int) -> ChargingStation {
         switch station {
             case 1:
-                return ChargingStation(title: "Charging Station 1", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.707049, longitude: 9.220510))
+            return ChargingStation(title: "Charging Station 1", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.707049, longitude: 9.220510), ownerID: "ownerID")
             case 2:
-                return ChargingStation(title: "Charging Station 2", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.718049, longitude: 9.220510))
+                return ChargingStation(title: "Charging Station 2", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.718049, longitude: 9.220510), ownerID: "ownerID")
             case 3:
-                return ChargingStation(title: "Charging Station 3", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.727049, longitude: 9.222510))
+                return ChargingStation(title: "Charging Station 3", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.727049, longitude: 9.222510), ownerID: "ownerID")
             case 4:
-                return ChargingStation(title: "Charging Station 4", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.737049, longitude: 9.223510))
+                return ChargingStation(title: "Charging Station 4", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.737049, longitude: 9.223510), ownerID: "ownerID")
             case 5:
-                return ChargingStation(title: "Charging Station 5", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.748049, longitude: 9.223510))
+                return ChargingStation(title: "Charging Station 5", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.748049, longitude: 9.223510), ownerID: "ownerID")
             default:
-                return ChargingStation(title: "Charging Station", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.707049, longitude: 9.220510))
+                return ChargingStation(title: "Charging Station", subtitle: "A great charging station.", coordinate: CLLocationCoordinate2D(latitude: 48.707049, longitude: 9.220510), ownerID: "ownerID")
         }
     }
     

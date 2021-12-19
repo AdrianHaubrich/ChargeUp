@@ -33,7 +33,7 @@ extension FirestoreChargingStationsReferenceFactory {
                                       start atDocument: DocumentSnapshot? = nil) -> Query {
         var query = Firestore.firestore()
             .collection(self.PATH_TO_STATIONS)
-            .whereField("creatorID", isEqualTo: creatorID)
+            .whereField("ownerID", isEqualTo: creatorID)
         
         if let limit = limit {
             query = query

@@ -20,6 +20,20 @@
 		A1101EFF275288D400738BA2 /* ChargingStationsServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101EFE275288D300738BA2 /* ChargingStationsServiceType.swift */; };
 		A1101F0127528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101F0027528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift */; };
 		A1101F0327528CE600738BA2 /* FirestoreChargingStationsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1101F0227528CE600738BA2 /* FirestoreChargingStationsServiceError.swift */; };
+		A1101F082754E78600738BA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1101F072754E78600738BA2 /* GoogleService-Info.plist */; };
+		A1101F092754E78600738BA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1101F072754E78600738BA2 /* GoogleService-Info.plist */; };
+		A1421F03276E46CA0007F7E6 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1421F02276E46CA0007F7E6 /* RouteView.swift */; };
+		A1421F07276E533E0007F7E6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1421F06276E533E0007F7E6 /* Route.swift */; };
+		A1421F0A276E6F290007F7E6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A1421F09276E6F290007F7E6 /* FirebaseAnalytics */; };
+		A1421F0C276E6F290007F7E6 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A1421F0B276E6F290007F7E6 /* FirebaseAnalyticsSwift-Beta */; };
+		A1421F0E276E6F290007F7E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A1421F0D276E6F290007F7E6 /* FirebaseAuth */; };
+		A155F18B276F5BF900E909E2 /* RouteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F18A276F5BF900E909E2 /* RouteError.swift */; };
+		A155F18D276F614200E909E2 /* RouteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F18C276F614200E909E2 /* RouteElement.swift */; };
+		A155F18F276F616300E909E2 /* RouteElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F18E276F616300E909E2 /* RouteElementState.swift */; };
+		A155F191276F677900E909E2 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F190276F677900E909E2 /* RouteViewModel.swift */; };
+		A155F193276F678800E909E2 /* RouteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F192276F678800E909E2 /* RouteState.swift */; };
+		A155F195276F679000E909E2 /* RouteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F194276F679000E909E2 /* RouteInput.swift */; };
+		A155F197276F6E4100E909E2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A155F196276F6E4100E909E2 /* .gitignore */; };
 		A1EE5CA2274165EF005D04B2 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA1274165EF005D04B2 /* Tests_iOS.swift */; };
 		A1EE5CA4274165EF005D04B2 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CA3274165EF005D04B2 /* Tests_iOSLaunchTests.swift */; };
 		A1EE5CAE274165EF005D04B2 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE5CAD274165EF005D04B2 /* Tests_macOS.swift */; };
@@ -91,6 +105,16 @@
 		A1101EFE275288D300738BA2 /* ChargingStationsServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsServiceType.swift; sourceTree = "<group>"; };
 		A1101F0027528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChargingStationsReferenceFactory.swift; sourceTree = "<group>"; };
 		A1101F0227528CE600738BA2 /* FirestoreChargingStationsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChargingStationsServiceError.swift; sourceTree = "<group>"; };
+		A1101F072754E78600738BA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1421F02276E46CA0007F7E6 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		A1421F06276E533E0007F7E6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A155F18A276F5BF900E909E2 /* RouteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteError.swift; sourceTree = "<group>"; };
+		A155F18C276F614200E909E2 /* RouteElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteElement.swift; sourceTree = "<group>"; };
+		A155F18E276F616300E909E2 /* RouteElementState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteElementState.swift; sourceTree = "<group>"; };
+		A155F190276F677900E909E2 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
+		A155F192276F678800E909E2 /* RouteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteState.swift; sourceTree = "<group>"; };
+		A155F194276F679000E909E2 /* RouteInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInput.swift; sourceTree = "<group>"; };
+		A155F196276F6E4100E909E2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A1EE5C87274165EE005D04B2 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A1EE5C88274165EE005D04B2 /* ChargeUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeUpApp.swift; sourceTree = "<group>"; };
 		A1EE5C89274165EE005D04B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,8 +142,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1421F0C276E6F290007F7E6 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				A1421F0E276E6F290007F7E6 /* FirebaseAuth in Frameworks */,
 				A1101EDF2752681800738BA2 /* PrometheusFirestore in Frameworks */,
 				A1EE5CCE27416696005D04B2 /* Prometheus in Frameworks */,
+				A1421F0A276E6F290007F7E6 /* FirebaseAnalytics in Frameworks */,
 				A1EE5CCB27416670005D04B2 /* Helena in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +231,44 @@
 			path = Firestore;
 			sourceTree = "<group>";
 		};
+		A1421F01276E46860007F7E6 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				A1421F02276E46CA0007F7E6 /* RouteView.swift */,
+				A155F190276F677900E909E2 /* RouteViewModel.swift */,
+				A155F192276F678800E909E2 /* RouteState.swift */,
+				A155F194276F679000E909E2 /* RouteInput.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		A1421F04276E53190007F7E6 /* Charging Station */ = {
+			isa = PBXGroup;
+			children = (
+				A1EE5CD927417086005D04B2 /* ChargingStation.swift */,
+				A1EE5CDE2746B3A6005D04B2 /* ChargingStationError.swift */,
+			);
+			path = "Charging Station";
+			sourceTree = "<group>";
+		};
+		A1421F05276E53250007F7E6 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				A1421F06276E533E0007F7E6 /* Route.swift */,
+				A155F18C276F614200E909E2 /* RouteElement.swift */,
+				A155F18E276F616300E909E2 /* RouteElementState.swift */,
+				A155F18A276F5BF900E909E2 /* RouteError.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		A14BA781276E3F4600707480 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A1EE5C80274165ED005D04B2 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +277,7 @@
 				A1EE5CA0274165EF005D04B2 /* Tests iOS */,
 				A1EE5CAC274165EF005D04B2 /* Tests macOS */,
 				A1EE5C91274165EF005D04B2 /* Products */,
+				A14BA781276E3F4600707480 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +292,8 @@
 				A1EE5C8A274165EE005D04B2 /* Persistence.swift */,
 				A1EE5C8B274165EF005D04B2 /* Assets.xcassets */,
 				A1EE5C86274165EE005D04B2 /* ChargeUp.xcdatamodeld */,
+				A1101F072754E78600738BA2 /* GoogleService-Info.plist */,
+				A155F196276F6E4100E909E2 /* .gitignore */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -273,6 +341,7 @@
 				A1101EE9275273B000738BA2 /* Home */,
 				A1EE5CE02746B9C6005D04B2 /* Charging Station Detail */,
 				A1101EE42752726900738BA2 /* Create Charging Station */,
+				A1421F01276E46860007F7E6 /* Routes */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,8 +349,8 @@
 		A1EE5CD827417077005D04B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A1EE5CD927417086005D04B2 /* ChargingStation.swift */,
-				A1EE5CDE2746B3A6005D04B2 /* ChargingStationError.swift */,
+				A1421F04276E53190007F7E6 /* Charging Station */,
+				A1421F05276E53250007F7E6 /* Route */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +387,9 @@
 				A1EE5CCA27416670005D04B2 /* Helena */,
 				A1EE5CCD27416696005D04B2 /* Prometheus */,
 				A1101EDE2752681800738BA2 /* PrometheusFirestore */,
+				A1421F09276E6F290007F7E6 /* FirebaseAnalytics */,
+				A1421F0B276E6F290007F7E6 /* FirebaseAnalyticsSwift-Beta */,
+				A1421F0D276E6F290007F7E6 /* FirebaseAuth */,
 			);
 			productName = "ChargeUp (iOS)";
 			productReference = A1EE5C90274165EF005D04B2 /* ChargeUp.app */;
@@ -415,6 +487,7 @@
 				A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */,
 				A1EE5CCC27416696005D04B2 /* XCRemoteSwiftPackageReference "Prometheus" */,
 				A1101EDD2752681800738BA2 /* XCRemoteSwiftPackageReference "PrometheusFirestore" */,
+				A1421F08276E6F290007F7E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A1EE5C91274165EF005D04B2 /* Products */;
 			projectDirPath = "";
@@ -434,6 +507,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EE5CB9274165EF005D04B2 /* Assets.xcassets in Resources */,
+				A155F197276F6E4100E909E2 /* .gitignore in Resources */,
+				A1101F082754E78600738BA2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EE5CBA274165EF005D04B2 /* Assets.xcassets in Resources */,
+				A1101F092754E78600738BA2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,14 +542,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A155F195276F679000E909E2 /* RouteInput.swift in Sources */,
+				A1421F03276E46CA0007F7E6 /* RouteView.swift in Sources */,
+				A155F18D276F614200E909E2 /* RouteElement.swift in Sources */,
 				A1101F0127528AC900738BA2 /* FirestoreChargingStationsReferenceFactory.swift in Sources */,
 				A1EE5CE62746BAF2005D04B2 /* CreateChargingStationView.swift in Sources */,
 				A1101EEB2752747900738BA2 /* HomeViewModel.swift in Sources */,
+				A155F18B276F5BF900E909E2 /* RouteError.swift in Sources */,
+				A155F18F276F616300E909E2 /* RouteElementState.swift in Sources */,
 				A1EE5CB3274165EF005D04B2 /* ChargeUpApp.swift in Sources */,
 				A1EE5CB7274165EF005D04B2 /* Persistence.swift in Sources */,
 				A1101EED275274A100738BA2 /* HomeState.swift in Sources */,
 				A1101EF427527F7000738BA2 /* ChargingStationDetailState.swift in Sources */,
 				A1EE5CE42746BA26005D04B2 /* ChargingStationCard.swift in Sources */,
+				A1421F07276E533E0007F7E6 /* Route.swift in Sources */,
 				A1EE5CB1274165EF005D04B2 /* ChargeUp.xcdatamodeld in Sources */,
 				A1EE5CD427416703005D04B2 /* HomeView.swift in Sources */,
 				A1101EF82752882C00738BA2 /* FirestoreChargingStationsService.swift in Sources */,
@@ -485,8 +567,10 @@
 				A1101F0327528CE600738BA2 /* FirestoreChargingStationsServiceError.swift in Sources */,
 				A1EE5CDF2746B3A6005D04B2 /* ChargingStationError.swift in Sources */,
 				A1101EFF275288D400738BA2 /* ChargingStationsServiceType.swift in Sources */,
+				A155F191276F677900E909E2 /* RouteViewModel.swift in Sources */,
 				A1EE5CDA27417086005D04B2 /* ChargingStation.swift in Sources */,
 				A1101EF227527F5E00738BA2 /* ChargingStationDetailViewModel.swift in Sources */,
+				A155F193276F678800E909E2 /* RouteState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +1013,14 @@
 				kind = branch;
 			};
 		};
+		A1421F08276E6F290007F7E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		A1EE5CC927416670005D04B2 /* XCRemoteSwiftPackageReference "Helena" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AdrianHaubrich/Helena";
@@ -952,6 +1044,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A1101EDD2752681800738BA2 /* XCRemoteSwiftPackageReference "PrometheusFirestore" */;
 			productName = PrometheusFirestore;
+		};
+		A1421F09276E6F290007F7E6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1421F08276E6F290007F7E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A1421F0B276E6F290007F7E6 /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1421F08276E6F290007F7E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		A1421F0D276E6F290007F7E6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1421F08276E6F290007F7E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		A1EE5CCA27416670005D04B2 /* Helena */ = {
 			isa = XCSwiftPackageProductDependency;

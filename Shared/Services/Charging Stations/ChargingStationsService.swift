@@ -22,5 +22,7 @@ protocol ChargingStationsService {
     // MARK: Listen
     
     // MARK: Create
+    @discardableResult
+    func createStation(_ station: ChargingStation) async throws -> ChargingStation
     
 }

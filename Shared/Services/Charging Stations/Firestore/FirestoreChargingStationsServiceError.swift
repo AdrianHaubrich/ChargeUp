@@ -9,4 +9,5 @@ import Foundation
 
 enum FirestoreChargingStationsServiceError: String, Error {
     case unableToFetchStation = "Unable to fetch station."
+    case unableToCreateStation = "Unable to create station."
 }

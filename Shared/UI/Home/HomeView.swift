@@ -20,6 +20,7 @@ struct HomeView: View {
     @State var isBottomSheetOpen = true
     @State var isPresentingDetail = false
     @State var isPresentingCreation = false
+    @State var selectedIndex: Int = 0
     
     // MARK: Body
     var body: some View {
@@ -51,39 +52,78 @@ struct HomeView: View {
                 }
                     .ignoresSafeArea()
                 
-                Text("Center: \(currentCenter.latitude) | \(currentCenter.longitude)")
+                // Text("Center: \(currentCenter.latitude) | \(currentCenter.longitude)")
             }
             
             // MARK: Bottom Sheet
             HelenaFullScreenBottomCard(isOpen: self.$isBottomSheetOpen, minHeight: 180, maxHeight: UIScreen.main.bounds.size.height) {
                 
-                // Actions
-                HStack {
-                    IconButton(systemName: "plus") {
-                        self.isPresentingCreation.toggle()
+                // Picker
+                HelenaRectPicker(selectedIndex: self.$selectedIndex, options: ["Routes", "Stations"])
+                    .padding([.horizontal, .top])
+                
+                // Routes
+                if selectedIndex == 0 {
+                    ScrollView {
+                        
+                        // Actions
+                        /*HStack {
+                            IconButton(systemName: "plus") {
+                                self.isPresentingCreation.toggle()
+                            }
+                        }
+                        .padding(.top)*/
+                        
+                        // Route
+                        // TODO: Routes instead of one route...
+                        RouteView(viewModel: AnyViewModel(RouteViewModel(route: Route(ownerID: self.viewModel.ownerID))))
+                        
                     }
                 }
-                .padding()
                 
                 // Charging Stations
-                ScrollView {
-                    ForEach(self.viewModel.state.chargingStations) { station in
-                        ChargingStationCard(station: station) { station in
-                            // Center Map to Station
-                            // self.currentCenter = station.annotation.coordinate
-                            
-                            // Present Station
-                            self.setStation(station)
-                            self.isPresentingDetail.toggle()
+                else if self.selectedIndex == 1 {
+                    ScrollView {
+                        
+                        // Actions
+                        HStack {
+                            IconButton(systemName: "plus") {
+                                self.isPresentingCreation.toggle()
+                            }
                         }
-                        .padding(5)
-                    }.padding()
+                        .padding(.top)
+                        
+                        // Stations
+                        ForEach(self.viewModel.state.chargingStations) { station in
+                            LazyVStack {
+                                ChargingStationCard(station: station, initialIsCollabsed: false) { station in
+                                    // Center Map to Station
+                                    // self.currentCenter = station.annotation.coordinate
+                                    
+                                    // Present Station
+                                    self.setStation(station)
+                                    self.isPresentingDetail.toggle()
+                                } onMapSelection: {station in
+                                    // Present Station
+                                    self.setStation(station)
+                                    self.isPresentingDetail.toggle()
+                                }
+                                .onAppear {
+                                    self.fetchStationsLazily(currentStation: station)
+                                }
+                            }
+                        }.padding()
+                    }
                 }
+                
             }
             .offset(x: 0, y: 25)
             
         }
         .ignoresSafeArea(edges: .bottom)
+        .onAppear(perform: {
+            self.fetchFirstStations()
+        })
         
         // MARK: Detail
         .sheet(isPresented: $isPresentingDetail) {
@@ -94,8 +134,8 @@ struct HomeView: View {
         
         // MARK: Creation
         .sheet(isPresented: $isPresentingCreation) {
-            CreateChargingStationView() { newStation in
-                // Add Station
+            CreateChargingStationView(ownerID: self.viewModel.ownerID) { newStation in
+                // Create Station
                 self.createStation(newStation)
                 
                 // Hide Sheet
@@ -122,9 +162,18 @@ extension HomeView {
     func setStation(_ station: ChargingStation) {
         self.viewModel.trigger(.setStationToPresent(station: station))
     }
-    
+        
     func createStation(_ station: ChargingStation) {
         self.viewModel.trigger(.createStation(station: station))
+    }
+    
+    func fetchFirstStations() {
+        print("Call Fetch first trigger!")
+        self.viewModel.trigger(.fetchStations)
+    }
+    
+    func fetchStationsLazily(currentStation: ChargingStation) {
+        self.viewModel.trigger(.fetchStationsLazily(currentStation: currentStation))
     }
     
 }
@@ -171,6 +220,6 @@ struct IconButton: View {
 // MARK: - Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: AnyViewModel(HomeViewModel()))
+        HomeView(viewModel: AnyViewModel(HomeViewModel(stationsService: FirestoreChargingStationsService(currentUserID: "nil"))))
     }
 }

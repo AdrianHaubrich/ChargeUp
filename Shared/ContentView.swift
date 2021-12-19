@@ -9,15 +9,44 @@ import SwiftUI
 import CoreData
 import Prometheus
 
+import Firebase
+import FirebaseAuth
+import Helena
+
 
 struct ContentView: View {
     
+    @State var uid: String?
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    
     var body: some View {
-        HomeView(viewModel: AnyViewModel(HomeViewModel()))
+        
+        if let uid = uid {
+            HomeView(viewModel: AnyViewModel(HomeViewModel(stationsService: FirestoreChargingStationsService(currentUserID: uid))))
+            // TODO: create project & do add google-plist to .gitignore
+        } else {
+            VStack {
+                Text("Login").helenaFont(type: .title)
+                HelenaTextField("Password", text: $email, isSecure: false, isLarge: true)
+                HelenaTextField("Password", text: $password, isSecure: true, isLarge: true)
+                HelenaButton(text: "Login") {
+                    Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error  in
+                        self.uid = authResult?.user.uid
+                    }
+                }
+            }
+            .onAppear {
+                if let uid = Auth.auth().currentUser?.uid {
+                    self.uid = uid
+                }
+            }
+        }
+        
     }
     
 }
-
 
 /*struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext

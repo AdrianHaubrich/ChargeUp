@@ -12,6 +12,7 @@ import MapKit
 
 struct CreateChargingStationView: View {
     
+    let ownerID: String
     let onCreation: (_ newStaton: ChargingStation) -> ()
     
     @State var title = ""
@@ -48,7 +49,7 @@ struct CreateChargingStationView: View {
                     guard let coordinate = self.location?.coordinate else {
                         return
                     }
-                    let station = ChargingStation(title: self.title, subtitle: self.subtitle, coordinate: coordinate, location: location)
+                    let station = ChargingStation(title: self.title, subtitle: self.subtitle, coordinate: coordinate, ownerID: ownerID, location: location)
                     self.onCreation(station)
                 }
                 .buttonStyle(HelenaPrimaryButtonStyle())
@@ -63,7 +64,7 @@ struct CreateChargingStationView: View {
 
 struct CreateChargingStationView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateChargingStationView() { newStation in
+        CreateChargingStationView(ownerID: "ownerID") { newStation in
             // ...
         }
     }

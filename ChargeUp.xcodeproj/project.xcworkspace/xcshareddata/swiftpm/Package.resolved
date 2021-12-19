@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "839cc6b0cd80b0b8bf81fe9bd82b743b25dc6446",
-          "version": "8.9.1"
+          "revision": "08686f04881483d2bc098b2696e674c0ba135e47",
+          "version": "8.10.0"
         }
       },
       {
@@ -114,7 +114,7 @@
         "repositoryURL": "https://github.com/AdrianHaubrich/PrometheusFirestore",
         "state": {
           "branch": "main",
-          "revision": "ee1c2fdaaef82d82ab91d589dff19159d22bf305",
+          "revision": "85663b977c8bccb138aaba0418d74ba1c818a6d4",
           "version": null
         }
       },

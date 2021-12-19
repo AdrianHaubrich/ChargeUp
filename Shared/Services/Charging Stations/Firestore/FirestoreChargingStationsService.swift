@@ -82,5 +82,21 @@ extension FirestoreChargingStationsService {
 
 // MARK: - Create
 extension FirestoreChargingStationsService {
-    // TODO: Create - add to protocol
+    
+    func createStation(_ station: ChargingStation) async throws -> ChargingStation {
+        do {
+            
+            // Upload Station
+            try FirestoreChargingStationsReferenceFactory
+                .generateStationReference(by: station.id)
+                .setData(from: station)
+            
+            return station
+            
+        } catch {
+            print("Error in \(#file) in \(#function): " + error.localizedDescription)
+            throw FirestoreChargingStationsServiceError.unableToCreateStation
+        }
+    }
+    
 }
