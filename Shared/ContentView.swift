@@ -25,7 +25,6 @@ struct ContentView: View {
         
         if let uid = uid {
             HomeView(viewModel: AnyViewModel(HomeViewModel(stationsService: FirestoreChargingStationsService(currentUserID: uid))))
-            // TODO: create project & do add google-plist to .gitignore
         } else {
             VStack {
                 Text("Login").helenaFont(type: .title)
